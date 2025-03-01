@@ -5,6 +5,8 @@ import {BsFillMoonStarsFill } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+
+import profileImage from "../assets/q.jpg"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,17 +43,28 @@ export default function Home() {
           </ul>
         </nav>
         {/* hero */}
-        <div>
-          <h1>Isul nethila kariyawasam</h1>
-          <h3>Mobile Apps and website developer</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, sint reprehenderit, ad autem voluptates enim doloribus dolores quaerat nemo sequi facere voluptatum officiis nesciunt tenetur? Dignissimos voluptas similique aperiam voluptate?</p>
+        <div className=" text-center p-10">
+          <h1 className=" text-5xl text-yellow-400 font-bold">Isul nethila kariyawasam</h1>
+          <h3 className="text-2xl py-4">Mobile Apps and website developer</h3>
+          <p className="text-sm text-gray-400 leading-6">I am a passionate Mobile App and Website Developer with a strong foundation in React Native, Java, and web technologies. I specialize in creating user-friendly mobile applications and responsive websites that deliver seamless experiences. With a keen eye for design and functionality, I develop efficient, scalable, and high-performance applications.
+
+Currently, I am building projects that enhance my skills in mobile and web development, including a currency converter app and a multi-page website with navigation. I am always eager to learn and take on new challenges to improve my expertise.</p>
         </div>
         {/* socilas */}
-        <div>
+        <div className="flex text-5xl justify-center gap-16 text-gray-600">
           <a href="https://github.com/isulnethila"><FaGithub/></a>
           <a href="https://www.facebook.com/nethila.kari"><FaFacebook/></a>
           <a href="https://www.linkedin.com/in/isul-nethila-0740a1319/"><FaLinkedin/></a>
           </div>
+        <div className="m-auto relative  bg-gradient-to-b from-gray-500 w-80 h-80 p-5 mt-20 rounded-full" >
+          <Image
+            className=" rounded-full"
+            src={profileImage}
+            alt="profile photo"
+            objectFit="cover"
+          />
+
+        </div>
       </section>
     </main>
    </div>
