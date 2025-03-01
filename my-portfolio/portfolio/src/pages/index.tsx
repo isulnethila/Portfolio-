@@ -119,10 +119,37 @@ Currently, I am building projects that enhance my skills in mobile and web devel
       {/* my work */}
       <section>
         <div>
-          <h2>Potfolio</h2>
+          <h2 className="text-5xl  font-bold opacity-65 py-10">Portfolio</h2>
           <p className="text-sm text-gray-400 leading-6">I showcase my work through high-quality visuals, including app screenshots, website designs, and graphic samples. From intuitive mobile apps to responsive websites and eye-catching graphics, my portfolio reflects my skills in creating functional and visually appealing digital solutions.</p>
         </div>
+        <div className="flex flex-col gap-10 p-10">
+          <Image
+            src={web1}
+            alt="web1"
+            layout="responsive"
+            className="rounded-lg object-cover"
+          />
+          <Image
+            src={web2}
+            alt="web2"
+            layout="responsive"
+            className="rounded-lg object-cover"
+          />
+          <Image
+            src={web3}
+            alt="web3"
+            layout="responsive"
+            className="rounded-lg object-cover"
+          />
+          <Image
+            src={web4}
+            alt="web4"
+            layout="responsive"
+            className="rounded-lg object-cover"
+          />
+        </div>
       </section>
+      
     </main>
    </div>
   );
