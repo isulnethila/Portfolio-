@@ -149,7 +149,16 @@ Currently, I am building projects that enhance my skills in mobile and web devel
           />
         </div>
       </section>
-      
+      {/* footer */}
+      <footer className="border-t-2 border-black text-sm opacity-70 flex flex-col gap-5 items-center justify-center py-10">
+        <h3 className="text-base mb-2">Contact me for more details</h3>
+        <p className="opacity-40">Contact me for more details and let’s bring your ideas to life! </p>
+        <div className="flex text-5xl justify-center gap-16 text-gray-600">
+          <a href="https://github.com/isulnethila"><FaGithub/></a>
+          <a href="https://www.facebook.com/nethila.kari"><FaFacebook/></a>
+          <a href="https://www.linkedin.com/in/isul-nethila-0740a1319/"><FaLinkedin/></a>
+          </div>
+      </footer>
     </main>
    </div>
   );
