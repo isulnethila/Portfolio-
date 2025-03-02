@@ -7,6 +7,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import profileImage from "../assets/q.jpg";
 import graphicDesining from "../assets/design.png";
+
 import code from "../assets/code.png";
 import web from "../assets/web.png";
 import web1 from "../assets/web1.png"
@@ -17,28 +18,22 @@ import web4 from "../assets/web5.png"
 //hooks
 import { useState } from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+//framer
+import { motion } from "framer-motion";
 
 export default function Home() {
   //function
-  const[darkMode,setdarkmode]=useState(false);
+  const[darkmode,setdarkmode]=useState(false);
+  
   return (
-   <div className={darkMode? "dark" : ""}>
+   <div className={darkmode? "dark" : ""}>
     <Head>
       <title>Portfolio website</title>
       <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 </style>
     </Head>
-    <main className="font-poppins bg-yellow-50 min-h-screen px-10 md:px-20 lg:px-40 dark:bg-black">
+    <main className="font-poppins bg-yellow-50 min-h-screen px-10 md:px-20 lg:px-40 ">
       <section>
         {/* nav */}
         <nav className="py-10 flex justify-between">
@@ -46,7 +41,8 @@ export default function Home() {
           <ul className="flex items-center">
             <li className=" cursor-pointer text-xl mx-5" >
               <BsFillMoonStarsFill 
-                onClick={()=>setdarkmode(!darkMode)}
+                onClick={()=>setdarkmode(!darkmode)}
+                
                 className="cursor-pointer text-xl mx-5"/>
             </li>
             <li>
@@ -70,7 +66,12 @@ Currently, I am building projects that enhance my skills in mobile and web devel
           <a href="https://www.facebook.com/nethila.kari"><FaFacebook/></a>
           <a href="https://www.linkedin.com/in/isul-nethila-0740a1319/"><FaLinkedin/></a>
           </div>
-        <div className="m-auto relative  bg-gradient-to-b from-gray-500 w-80 h-80 p-5 mt-20 rounded-full" >
+       <motion.div
+        initial={{opacity:0,scale:0.5}}
+        animate={{opacity:1,scale:1}}
+        transition={{duration:0.5}}
+       >
+       <div className="m-auto relative  bg-gradient-to-b from-gray-500 w-80 h-80 p-5 mt-20 rounded-full" >
           <Image
             className=" rounded-full"
             src={profileImage}
@@ -79,6 +80,7 @@ Currently, I am building projects that enhance my skills in mobile and web devel
           />
 
         </div>
+       </motion.div>
       </section>
       {/* services */}
       <section>
@@ -88,6 +90,13 @@ Currently, I am building projects that enhance my skills in mobile and web devel
         {/* services cards */}
         <div className="md:flex lg:flex gap-10 mx-auto">
           {/* card1 */}
+          <motion.div
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.9}}
+          
+          >
+
+          
           <div className="bg-yellow-300 text-center shadow-sm p-5 rounded-xl my-10">
               <Image
                 src={graphicDesining}
@@ -99,6 +108,11 @@ Currently, I am building projects that enhance my skills in mobile and web devel
               <h2 className="text-2xl font-bold">Graphic Designing</h2>
               <p className="text-sm text-gray-700 py-2 leading-6">I create visually appealing designs that enhance brand identity and user experience. My services include logo design, social media graphics, UI/UX elements, and marketing materials. With a focus on creativity and detail, I bring ideas to life through clean and engaging designs.</p>
           </div>
+          </motion.div>
+          <motion.div
+            whileHover={{scale:1.1}}
+            whileTap={{scale:0.9}}
+          >
           <div className="bg-yellow-300 text-center shadow-sm p-5 rounded-xl my-10">
               <Image
                 src={code}
@@ -110,6 +124,11 @@ Currently, I am building projects that enhance my skills in mobile and web devel
               <h2 className="text-2xl font-bold">Application development</h2>
               <p className="text-sm text-gray-700 py-2 leading-6">I develop high-quality mobile and web applications tailored to your needs. Specializing in React Native and modern web technologies, I create user-friendly, efficient, and scalable applications with seamless functionality and intuitive design.</p>
           </div>
+          </motion.div>
+          <motion.div 
+            whileHover={{scale:1.1}}
+            whileTap={{scale:0.9}}
+          >
           <div className="bg-yellow-300 text-center shadow-sm p-5 rounded-xl my-10">
               <Image
                 src={web}
@@ -121,6 +140,7 @@ Currently, I am building projects that enhance my skills in mobile and web devel
               <h2 className="text-2xl font-bold">web development</h2>
               <p className="text-sm text-gray-700 py-2 leading-6">I build responsive and dynamic websites tailored to your needs. Using modern web technologies, I create fast, user-friendly, and visually appealing websites that provide a seamless experience across all devices.</p>
           </div>
+          </motion.div>
         </div>
       </section>
       {/* my work */}
@@ -131,36 +151,58 @@ Currently, I am building projects that enhance my skills in mobile and web devel
         </div>
         <div className="flex flex-col gap-10 p-10 lg:flex-row lg:flex-wrap">
           <div className="basis-1/3 flex-1">
+          <motion.div
+            whileHover={{scale:1.1,rotate:3}}
+            whileTap={{scale:0.8,rotate:-10,borderRadius:"100"}}
+          >
           <Image
             src={web1}
             alt="web1"
             layout="responsive"
             className="rounded-lg object-cover"
           />
+          </motion.div>
           </div>
           <div className="basis-1/3 flex-1">
+          <motion.div
+            whileHover={{scale:1.1,rotate:3}}
+            whileTap={{scale:0.8,rotate:-10,borderRadius:"100"}}
+          >
+
+          
           <Image
             src={web2}
             alt="web2"
             layout="responsive"
             className="rounded-lg object-cover"
           />
+          </motion.div>
           </div>
           <div className="basis-1/3 flex-1">
+          <motion.div
+            whileHover={{scale:1.1,rotate:3}}
+            whileTap={{scale:0.8,rotate:-10,borderRadius:"100"}}
+          >
           <Image
             src={web3}
             alt="web3"
             layout="responsive"
             className="rounded-lg object-cover"
           />
+          </motion.div>
           </div >
           <div className="basis-1/3 flex-1">
+          <motion.div
+            whileHover={{scale:1.1,rotate:3}}
+            whileTap={{scale:0.8,rotate:-10,borderRadius:"100"}}
+          >
           <Image
             src={web4}
             alt="web4"
             layout="responsive"
             className="rounded-lg object-cover"
           />
+          </motion.div>
           </div>
         </div>
       </section>
