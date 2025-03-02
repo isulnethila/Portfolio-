@@ -7,6 +7,12 @@
   --foreground: #171717;
 }
 
+body.dark {
+  --background: #171717; /* Dark background */
+  --foreground: #ffffff; /* Light text color */
+}
+
+
 
 
 body {

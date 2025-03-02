@@ -23,7 +23,8 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   //function
-  const[darkmode,setdarkmode]=useState(false);
+const [darkmode, setdarkmode] = useState(false);
+
   
   return (
    <div className={darkmode? "dark" : ""}>
@@ -33,7 +34,7 @@ export default function Home() {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 </style>
     </Head>
-    <main className="font-poppins bg-yellow-50 min-h-screen px-10 md:px-20 lg:px-40 ">
+    <main className={`font-poppins min-h-screen px-10 md:px-20 lg:px-40 ${darkmode ? 'bg-black' : 'bg-yellow-50'}`}>
       <section>
         {/* nav */}
         <nav className="py-10 flex justify-between">
@@ -43,11 +44,11 @@ export default function Home() {
               <BsFillMoonStarsFill 
                 onClick={()=>setdarkmode(!darkmode)}
                 
-                className="cursor-pointer text-xl mx-5"/>
+                className="cursor-pointer text-xl mx-5 "/>
             </li>
             <li>
               <a href="https://drive.google.com/file/d/1UY3xkiO2Z6nUKQu5L2jpMobMuzHm3_ff/view?usp=sharing" 
-              className=" bg-yellow-400 py-2 px-5 text-black border-none rounded-2xl"
+              className=" bg-yellow-400 py-2 px-5 text-black border-none rounded-2xl "
               download={"resume"}>Resume</a>
             </li>
           </ul>
@@ -55,8 +56,8 @@ export default function Home() {
         {/* hero */}
         <div className=" text-center p-10">
           <h1 className=" text-5xl text-yellow-400 font-bold md:text-6xl lg:text-7xl lg:mb-4">Isul nethila kariyawasam</h1>
-          <h3 className="text-2xl py-4 md:text-3xl">Mobile Apps and website developer</h3>
-          <p className="text-sm text-gray-400 leading-6 max-w-xl mx-auto md:text-md">I am a passionate Mobile App and Website Developer with a strong foundation in React Native, Java, and web technologies. I specialize in creating user-friendly mobile applications and responsive websites that deliver seamless experiences. With a keen eye for design and functionality, I develop efficient, scalable, and high-performance applications.
+          <h3 className="text-2xl py-4 md:text-3xl ">Mobile Apps and website developer</h3>
+          <p className="text-sm text-gray-400 leading-6 max-w-xl mx-auto md:text-md ">I am a passionate Mobile App and Website Developer with a strong foundation in React Native, Java, and web technologies. I specialize in creating user-friendly mobile applications and responsive websites that deliver seamless experiences. With a keen eye for design and functionality, I develop efficient, scalable, and high-performance applications.
 
 Currently, I am building projects that enhance my skills in mobile and web development, including a currency converter app and a multi-page website with navigation. I am always eager to learn and take on new challenges to improve my expertise.</p>
         </div>
@@ -84,8 +85,8 @@ Currently, I am building projects that enhance my skills in mobile and web devel
       </section>
       {/* services */}
       <section>
-        <h2 className="text-5xl opacity-65 font-bold py-10">Service I offer</h2>
-        <p className="text-sm text-gray-400 leading-6"> offer professional mobile app and website development services, specializing in React Native for cross-platform apps and responsive web solutions. My expertise includes UI/UX implementation, API integration, performance optimization, and bug fixing to ensure smooth functionality. Whether you need a new app, a dynamic website, or enhancements to an existing project, I am committed to delivering high-quality solutions tailored to your needs. Let's build something great together! </p>
+        <h2 className="text-5xl opacity-65 font-bold py-10 ">Service I offer</h2>
+        <p className="text-sm text-gray-400 leading-6 "> offer professional mobile app and website development services, specializing in React Native for cross-platform apps and responsive web solutions. My expertise includes UI/UX implementation, API integration, performance optimization, and bug fixing to ensure smooth functionality. Whether you need a new app, a dynamic website, or enhancements to an existing project, I am committed to delivering high-quality solutions tailored to your needs. Let's build something great together! </p>
 
         {/* services cards */}
         <div className="md:flex lg:flex gap-10 mx-auto">
@@ -146,8 +147,8 @@ Currently, I am building projects that enhance my skills in mobile and web devel
       {/* my work */}
       <section>
         <div>
-          <h2 className="text-5xl  font-bold opacity-65 py-10">Portfolio</h2>
-          <p className="text-sm text-gray-400 leading-6">I showcase my work through high-quality visuals, including app screenshots, website designs, and graphic samples. From intuitive mobile apps to responsive websites and eye-catching graphics, my portfolio reflects my skills in creating functional and visually appealing digital solutions.</p>
+          <h2 className="text-5xl  font-bold opacity-65 py-10 ">Portfolio</h2>
+          <p className="text-sm text-gray-400 leading-6 ">I showcase my work through high-quality visuals, including app screenshots, website designs, and graphic samples. From intuitive mobile apps to responsive websites and eye-catching graphics, my portfolio reflects my skills in creating functional and visually appealing digital solutions.</p>
         </div>
         <div className="flex flex-col gap-10 p-10 lg:flex-row lg:flex-wrap">
           <div className="basis-1/3 flex-1">
@@ -208,8 +209,8 @@ Currently, I am building projects that enhance my skills in mobile and web devel
       </section>
       {/* footer */}
       <footer className="border-t-2 border-black text-sm opacity-70 flex flex-col gap-5 items-center justify-center py-10 lg:flex-col lg:items-center">
-        <h3 className="text-base mb-2">Contact me for more details</h3>
-        <p className="opacity-40">Contact me for more details and let’s bring your ideas to life! </p>
+        <h3 className="text-base mb-2 text-gray-500">Contact me for more details</h3>
+        <p className="opacity-40 text-gray-500">Contact me for more details and let’s bring your ideas to life! </p>
         <div className="flex text-5xl justify-center gap-16 text-gray-600">
           <a href="https://github.com/isulnethila"><FaGithub/></a>
           <a href="https://www.facebook.com/nethila.kari"><FaFacebook/></a>
